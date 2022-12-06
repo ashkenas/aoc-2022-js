@@ -3,8 +3,8 @@ const input = document.body.innerText.trim().split('\n');
 let p1 = 0;
 let p2 = 0;
 for (let i = 0; i < input.length; i++) {
-    const f = input[i].substr(0, input[i].length / 2);
-    const s = input[i].substr(input[i].length / 2);
+    const f = input[i].substring(0, input[i].length / 2);
+    const s = input[i].substring(input[i].length / 2);
     for (const c of f) {
         if (s.includes(c)) {
             p1 += c.charCodeAt(0) - (/[a-z]/.test(c) ? 96 : 38);
